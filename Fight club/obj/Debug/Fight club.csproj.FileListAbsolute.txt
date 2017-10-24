@@ -1,0 +1,11 @@
+C:\Users\akulo\Desktop\Fight club\Fight club\bin\Debug\Fight club.exe.config
+C:\Users\akulo\Desktop\Fight club\Fight club\bin\Debug\Fight club.exe
+C:\Users\akulo\Desktop\Fight club\Fight club\bin\Debug\Fight club.pdb
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight club.csprojResolveAssemblyReference.cache
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight_club.Form1.resources
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight_club.Properties.Resources.resources
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight club.csproj.GenerateResource.Cache
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight club.csproj.CoreCompileInputs.cache
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight club.exe
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight club.pdb
+C:\Users\akulo\Desktop\Fight club\Fight club\obj\Debug\Fight_club.AuthForm.resources
