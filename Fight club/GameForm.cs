@@ -7,7 +7,7 @@ namespace Fight_club
     /// <summary>
     ///  Represents View part of the MVC pattern
     /// </summary>
-    public partial class Form1 : Form
+    public partial class GameForm : Form
     {
         private Color C_NAME = Color.Blue;
         private Color C_PART = Color.MediumAquamarine;
@@ -20,12 +20,12 @@ namespace Fight_club
         string enemyName;
         bool gameOver = false;
 
-        public Form1()
+        public GameForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void GameForm_Load(object sender, EventArgs e)
         {
             AuthForm authForm = new AuthForm();
             if (authForm.ShowDialog(this) != DialogResult.OK)
@@ -33,7 +33,6 @@ namespace Fight_club
                 Close();
                 return;
             }
-
 
             enemyName = "Your enemy";
             name = authForm.Name;
@@ -105,6 +104,15 @@ namespace Fight_club
 
         void Reset()
         {
+            // Unsubscribing from the events
+            model.Player.RaiseBlockEvent -= OnBlock;
+            model.Enemy.RaiseBlockEvent -= OnBlock;
+            model.Player.RaiseWoundEvent -= OnWound;
+            model.Enemy.RaiseWoundEvent -= OnWound;
+            model.Player.RaiseDeathEvent -= OnDeath;
+            model.Enemy.RaiseDeathEvent -= OnDeath;
+            controller.RaiseTurnEvent -= OnTurn;
+
             Init();
 
             gameOver = false;
@@ -128,9 +136,9 @@ namespace Fight_club
 
         void OnTurn(object sender, TurnEventArgs e)
         {
-            Image img = pictureBox1.Image;
+            Image img = pbArrow.Image;
             img.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            pictureBox1.Image = img;
+            pbArrow.Image = img;
 
             gbBodyPart.Text = "Body part to " + (e.PlayerTurn ? "attack" : "protect");
         }
@@ -199,9 +207,9 @@ namespace Fight_club
                 UpdateEnemyHealth(0);
                 Log("\nVICTORY!", C_DAMG);
 
-                Image img = pictureBox1.Image;
+                Image img = pbArrow.Image;
                 img.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                pictureBox1.Image = img;
+                pbArrow.Image = img;
             }
             else
             {

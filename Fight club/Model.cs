@@ -1,7 +1,7 @@
 ﻿namespace Fight_club
 {
     /// <summary>
-    ///  Represents  Model part of the MVC pattern
+    ///  Represents Model part of the MVC pattern
     /// </summary>
     class Model : IModel
     {
